@@ -1,0 +1,695 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#08111f;
+color:#fff;
+overflow-x:hidden;
+line-height:1.6;
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+width:90%;
+max-width:1250px;
+margin:auto;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:rgba(8,17,31,.92);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(255,255,255,.08);
+z-index:999;
+}
+
+header .container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+text-decoration:none;
+color:white;
+}
+
+.logo i{
+font-size:35px;
+color:#3fa9ff;
+}
+
+.logo h2{
+font-size:24px;
+font-weight:700;
+}
+
+.logo span{
+font-size:14px;
+color:#7dbfff;
+}
+
+nav{
+display:flex;
+gap:30px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#3fa9ff;
+}
+
+.btn-header{
+background:linear-gradient(90deg,#248cff,#42b5ff);
+padding:14px 28px;
+border-radius:40px;
+text-decoration:none;
+color:white;
+font-weight:700;
+transition:.3s;
+}
+
+.btn-header:hover{
+transform:translateY(-4px);
+box-shadow:0 12px 30px rgba(36,140,255,.35);
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+padding:170px 0 110px;
+}
+
+.hero-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:60px;
+}
+
+.hero-texto{
+max-width:600px;
+}
+
+.tag{
+display:inline-block;
+padding:10px 20px;
+background:rgba(63,169,255,.12);
+border:1px solid rgba(63,169,255,.25);
+border-radius:30px;
+color:#78c3ff;
+font-size:14px;
+margin-bottom:25px;
+}
+
+.hero-texto h1{
+font-size:60px;
+line-height:1.1;
+margin-bottom:25px;
+}
+
+.hero-texto p{
+font-size:18px;
+color:#c7d6e6;
+margin-bottom:35px;
+}
+
+.hero-botoes{
+display:flex;
+gap:18px;
+flex-wrap:wrap;
+}
+
+.btn-renda,
+.btn-sono{
+padding:16px 28px;
+border-radius:35px;
+text-decoration:none;
+font-weight:700;
+color:white;
+transition:.3s;
+}
+
+.btn-renda{
+background:#248cff;
+}
+
+.btn-sono{
+background:#7c5cff;
+}
+
+.btn-renda:hover,
+.btn-sono:hover{
+transform:translateY(-4px);
+}/* ===========================
+   IMAGEM PRINCIPAL
+=========================== */
+
+.hero-imagem{
+flex:1;
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:550px;
+}
+
+.hero-imagem::before{
+content:"";
+position:absolute;
+width:420px;
+height:420px;
+background:#2d8cff;
+border-radius:50%;
+filter:blur(140px);
+opacity:.25;
+}
+
+.ebook{
+position:absolute;
+width:240px;
+border-radius:18px;
+filter:drop-shadow(0 25px 40px rgba(0,0,0,.45));
+transition:.4s;
+animation:flutuar 4s ease-in-out infinite;
+}
+
+.renda{
+left:40px;
+transform:rotate(-10deg);
+}
+
+.sono{
+right:40px;
+transform:rotate(10deg);
+animation-delay:2s;
+}
+
+.ebook:hover{
+transform:scale(1.08);
+}
+
+@keyframes flutuar{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-18px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+/* ===========================
+   BENEFÍCIOS
+=========================== */
+
+.beneficios{
+padding:100px 0;
+}
+
+.beneficios .container{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.beneficio{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+padding:35px;
+border-radius:22px;
+text-align:center;
+transition:.35s;
+}
+
+.beneficio:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,.35);
+border-color:#3fa9ff;
+}
+
+.beneficio i{
+font-size:45px;
+color:#3fa9ff;
+margin-bottom:20px;
+}
+
+.beneficio h3{
+font-size:24px;
+margin-bottom:12px;
+}
+
+.beneficio p{
+color:#c6d3df;
+}/* ===========================
+   PRODUTOS
+=========================== */
+
+.produtos{
+padding:120px 0;
+background:#0b1525;
+}
+
+.titulo{
+text-align:center;
+margin-bottom:70px;
+}
+
+.titulo span{
+display:inline-block;
+color:#4fb3ff;
+font-size:15px;
+font-weight:700;
+letter-spacing:2px;
+margin-bottom:15px;
+}
+
+.titulo h2{
+font-size:46px;
+margin-bottom:15px;
+}
+
+.titulo p{
+color:#b8c6d6;
+max-width:650px;
+margin:auto;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:40px;
+}
+
+.card{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+border-radius:25px;
+overflow:hidden;
+transition:.35s;
+backdrop-filter:blur(15px);
+}
+
+.card:hover{
+transform:translateY(-12px);
+border-color:#3fa9ff;
+box-shadow:0 25px 50px rgba(63,169,255,.18);
+}
+
+.card img{
+display:block;
+width:100%;
+padding:30px;
+background:linear-gradient(180deg,#10233d,#08111f);
+}
+
+.card h3{
+font-size:28px;
+padding:0 30px;
+margin:25px 0 15px;
+}
+
+.descricao{
+padding:0 30px;
+color:#c8d4df;
+line-height:1.8;
+min-height:90px;
+}
+
+.preco{
+padding:0 30px;
+margin:25px 0;
+font-size:42px;
+font-weight:800;
+color:#42b5ff;
+}
+
+.btn-comprar{
+display:block;
+margin:0 30px 30px;
+text-align:center;
+padding:18px;
+border-radius:15px;
+background:linear-gradient(90deg,#248cff,#42b5ff);
+text-decoration:none;
+font-weight:700;
+color:white;
+transition:.35s;
+}
+
+.btn-comprar:hover{
+transform:scale(1.03);
+box-shadow:0 18px 40px rgba(36,140,255,.35);
+}/* ===========================
+   ESTATÍSTICAS
+=========================== */
+
+.estatisticas{
+padding:100px 0;
+}
+
+.estatisticas .container{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.numero{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+border-radius:22px;
+padding:40px 20px;
+text-align:center;
+transition:.35s;
+}
+
+.numero:hover{
+transform:translateY(-10px);
+border-color:#3fa9ff;
+box-shadow:0 20px 40px rgba(63,169,255,.18);
+}
+
+.numero h2{
+font-size:55px;
+color:#42b5ff;
+margin-bottom:10px;
+}
+
+.numero p{
+color:#c8d4df;
+}
+
+/* ===========================
+   AVALIAÇÕES
+=========================== */
+
+.avaliacoes{
+padding:110px 0;
+background:#0b1525;
+}
+
+.cards-avaliacoes{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+margin-top:60px;
+}
+
+.avaliacao{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+padding:35px;
+border-radius:22px;
+transition:.35s;
+}
+
+.avaliacao:hover{
+transform:translateY(-10px);
+border-color:#3fa9ff;
+}
+
+.avaliacao h3{
+font-size:28px;
+margin-bottom:20px;
+}
+
+.avaliacao p{
+color:#c8d4df;
+line-height:1.8;
+margin-bottom:20px;
+}
+
+.avaliacao strong{
+color:#42b5ff;
+}
+
+/* ===========================
+   FAQ
+=========================== */
+
+.faq{
+padding:110px 0;
+}
+
+.pergunta{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+padding:30px;
+border-radius:20px;
+margin-bottom:20px;
+}
+
+.pergunta h3{
+margin-bottom:15px;
+font-size:24px;
+}
+
+.pergunta p{
+color:#c8d4df;
+line-height:1.8;
+}/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+padding:70px 0 40px;
+background:#050c18;
+border-top:1px solid rgba(255,255,255,.08);
+text-align:center;
+}
+
+footer h2{
+font-size:34px;
+color:#42b5ff;
+margin-bottom:15px;
+}
+
+footer p{
+color:#b8c6d6;
+margin:8px 0;
+}
+
+/* ===========================
+   RESPONSIVIDADE
+=========================== */
+
+@media(max-width:1100px){
+
+.hero-container{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-imagem{
+margin-top:50px;
+}
+
+.cards,
+.cards-avaliacoes,
+.estatisticas .container,
+.beneficios .container{
+grid-template-columns:1fr;
+}
+
+nav{
+display:none;
+}
+
+.hero-botoes{
+justify-content:center;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+padding-top:130px;
+}
+
+.hero-texto h1{
+font-size:38px;
+}
+
+.titulo h2{
+font-size:32px;
+}
+
+.btn-header{
+display:none;
+}
+
+.ebook{
+width:180px;
+}
+
+.renda{
+left:5px;
+}
+
+.sono{
+right:5px;
+}
+
+.card h3{
+font-size:24px;
+}
+
+.preco{
+font-size:34px;
+}
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-track{
+background:#08111f;
+}
+
+::-webkit-scrollbar-thumb{
+background:#42b5ff;
+border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+background:#248cff;
+}
+
+/* ===========================
+   ANIMAÇÕES
+=========================== */
+
+.card,
+.beneficio,
+.avaliacao,
+.numero,
+.pergunta{
+transition:.35s ease;
+}
+
+.card:hover,
+.beneficio:hover,
+.avaliacao:hover,
+.numero:hover{
+transform:translateY(-10px);
+}.mostrar{
+
+opacity:1!important;
+
+transform:translateY(0)!important;
+
+}
+
+.card,
+.beneficio,
+.avaliacao,
+.numero,
+.pergunta{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:.7s;
+
+}/* BOTÃO VOLTAR AO TOPO */
+
+.voltar-topo{
+
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:#248cff;
+
+color:#fff;
+
+font-size:24px;
+
+cursor:pointer;
+
+opacity:0;
+
+pointer-events:none;
+
+transition:.3s;
+
+z-index:9999;
+
+box-shadow:0 10px 25px rgba(36,140,255,.4);
+
+}
+
+.mostrar-topo{
+
+opacity:1;
+
+pointer-events:auto;
+
+}
+
+.voltar-topo:hover{
+
+transform:translateY(-5px);
+
+background:#42b5ff;
+
+}
